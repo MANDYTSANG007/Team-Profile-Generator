@@ -112,6 +112,15 @@ const askNext = () => {
                 employees.push(newEmployee);
                 askNext();
             })
+        }else if (employeeAnswer.role === "Intern") {
+            init("newIntern")
+            .then((employeeAnswer) => {
+                const newEmployee = new Intern(employeeAnswer.name, employeeAnswer.id, employeeAnswer.email, employeeAnswer.school);
+                employees.push(newEmployee);
+                askNext();
+            })
+        }else {
+            console.log("Team Profile Completed...rendering a team profile page");
         }
-    })
-}
+    });
+};
