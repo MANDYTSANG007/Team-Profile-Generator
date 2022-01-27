@@ -1,3 +1,4 @@
+//Import fs module using require
 const fs = requirer("fs");
 const inquirer = requirer("inquirer");
 
@@ -86,3 +87,15 @@ const nextEmployee = [
         choice: ["Engineer", "Intern", "Finish building my team"]
     }
 ];
+
+//initiate the app by asking for manager information and create a manager object
+function init() {
+    inquirer.prompt(newManager)
+    .then((employeeAnswer) => {
+        const newEmployee = new Manager(employeeAnswer.name, employeeAnswer.id, employeeAnswer.email, employeeAnswer.officeNumber);
+        employees.push(newEmployee);                //pushing newEmployee to the employees array 
+    })
+};
+
+//start the app
+init();
