@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/MANDYTSANG007/Team-Profile-Generator#readme",
   "dependencies": {
-    "inquirer": "^8.2.0"
+    "inquirer": "^8.2.0",
+    "jest": "^27.4.7"
   }
 }
