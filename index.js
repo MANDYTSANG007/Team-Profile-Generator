@@ -94,8 +94,24 @@ function init() {
     .then((employeeAnswer) => {
         const newEmployee = new Manager(employeeAnswer.name, employeeAnswer.id, employeeAnswer.email, employeeAnswer.officeNumber);
         employees.push(newEmployee);                //pushing newEmployee to the employees array 
+        askNext();
     })
 };
 
 //start the app
 init();
+
+//add the next employee and prompt to create an employee object
+const askNext = () => {
+    return init("nextEmployee")
+    .then((employeeAnswer) => {
+        if (employeeAnswer.role === "Engineer") {
+            init("newEngineer")
+            .then((employeeAnswer) => {
+                const newEmployee = new Engineer(employeeAnswer.name, employeeAnswer.id, employeeAnswer.email, employeeAnswer.github);
+                employees.push(newEmployee);
+                askNext();
+            })
+        }
+    })
+}
