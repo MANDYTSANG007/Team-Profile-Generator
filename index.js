@@ -76,5 +76,13 @@ const newIntern = [
         message: "What is the intern's school?",
         name: "school"
     },
-]
+];
 
+const nextEmployee = [
+    {
+        type: "list",
+        message: "What employee would you like to add next?",
+        name: "role",
+        choice: ["Engineer", "Intern", "Finish building my team"]
+    }
+];
