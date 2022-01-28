@@ -44,6 +44,6 @@ describe("Employee", () => {
             const testRole = "Employee";
             const employeeRole = new Employee("Mandy", 12345, "mandy@test.com");
             expect(employeeRole.getRole()).toBe(testRole);
-        })
+        });
     });
 });
