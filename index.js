@@ -2,9 +2,9 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 
-const Manager = require(".lib/Manager");
-const Engineer = require(".lib/Engineer");
-const Intern = require(".lib/Intern");
+const Manager = require("./lib/Manager");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
 
 //store employee objects as they are created
 const employees = [];
@@ -84,36 +84,36 @@ const nextEmployee = [
         type: "list",
         message: "What employee would you like to add next?",
         name: "role",
-        choice: ["Engineer", "Intern", "Finish building my team"]
+        choices: ["Engineer", "Intern", "Finish building my team"]
     }
 ];
 
 //initiate the app by asking for manager information and create a manager object
-function init() {
-    inquirer.prompt(newManager)
+function init(role) {
+    return inquirer.prompt(role)
     .then((employeeAnswer) => {
         const newEmployee = new Manager(employeeAnswer.name, employeeAnswer.id, employeeAnswer.email, employeeAnswer.officeNumber);
         employees.push(newEmployee);                //pushing newEmployee to the employees array 
-        askNext();
+        askNext()
     })
 };
 
 //start the app
-init();
+init(newManager);
 
 //add the next employee and prompt to create an employee object
 const askNext = () => {
-    return init("nextEmployee")
+    inquirer.prompt(nextEmployee)
     .then((employeeAnswer) => {
         if (employeeAnswer.role === "Engineer") {
-            init("newEngineer")
+            inquirer.prompt(newEngineer)
             .then((employeeAnswer) => {
                 const newEmployee = new Engineer(employeeAnswer.name, employeeAnswer.id, employeeAnswer.email, employeeAnswer.github);
                 employees.push(newEmployee);
                 askNext();
             })
         }else if (employeeAnswer.role === "Intern") {
-            init("newIntern")
+            inquirer.prompt(newIntern)
             .then((employeeAnswer) => {
                 const newEmployee = new Intern(employeeAnswer.name, employeeAnswer.id, employeeAnswer.email, employeeAnswer.school);
                 employees.push(newEmployee);
@@ -121,6 +121,7 @@ const askNext = () => {
             })
         }else {
             console.log("Team Profile Completed...rendering a team profile page");
+            console.log(employees)
         }
     });
 };
