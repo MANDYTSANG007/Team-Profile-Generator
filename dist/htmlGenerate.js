@@ -2,25 +2,25 @@ function generate(employees) {
     var teamInfoHTML = '<div>'
     for (let employee of employees) {
         if(employee.role === "Manager") {
-            teamInfoHTML += `<div>${employee.name}</div>`
-            teamInfoHTML += `<div>${employee.role}</div>`
-            teamInfoHTML += `<div>${employee.id}</div>`
-            teamInfoHTML += `<div>${employee.email}</div>`
-            teamInfoHTML += `<div>${employee.officeNumber}</div><br>`;
+            teamInfoHTML += `<div>Name: ${employee.name}</div>`
+            teamInfoHTML += `<div>Role: ${employee.role}</div>`
+            teamInfoHTML += `<div>ID: ${employee.id}</div>`
+            teamInfoHTML += `<div>Email:<a href="mailto:${employee.email}">${employee.email}</a> </div>`
+            teamInfoHTML += `<div>Office Number: ${employee.officeNumber}</div><br>`;
             
-        }else if (employees.role === "Engineer"){
-            teamInfoHTML += `<div>${employee.name}</div>`
-            teamInfoHTML += `<div>${employee.role}</div>`
-            teamInfoHTML += `<div>${employee.id}</div>`
-            teamInfoHTML += `<div>${employee.email}</div>`
-            teamInfoHTML += `<div>${employee.github}</div><br>`;
+        }else if (employee.role === "Engineer"){
+            teamInfoHTML += `<div>Name: ${employee.name}</div>`
+            teamInfoHTML += `<div>Role: ${employee.role}</div>`
+            teamInfoHTML += `<div>ID: ${employee.id}</div>`
+            teamInfoHTML += `<div>Email:<a href="mailto:${employee.email}">${employee.email}</a></div>`
+            teamInfoHTML += `<div>GitHub:<a href="https://github.com/${employee.github}" target="_blank">${employee.github}</a></div><br>`;
             
-        }else {
-            teamInfoHTML += `<div>${employee.name}</div>`
-            teamInfoHTML += `<div>${employee.role}</div>`
-            teamInfoHTML += `<div>${employee.id}</div>`
-            teamInfoHTML += `<div>${employee.email}</div>`
-            teamInfoHTML += `<div>${employee.school}</div><br>`;
+        }else if (employee.role === "Intern"){
+            teamInfoHTML += `<div>Name: ${employee.name}</div>`
+            teamInfoHTML += `<div>Role: ${employee.role}</div>`
+            teamInfoHTML += `<div>ID: ${employee.id}</div>`
+            teamInfoHTML += `<div>Email:<a href="mailto:${employee.email}">${employee.email}</a></div>`
+            teamInfoHTML += `<div>School: ${employee.school}</div><br>`;
             
         }
       
