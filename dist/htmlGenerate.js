@@ -1,4 +1,32 @@
 function generate(employees) {
+    var teamInfoHTML = '<div>'
+    for (let employee of employees) {
+        if(employee.role === "Manager") {
+            teamInfoHTML += `<div>${employee.name}</div>`
+            teamInfoHTML += `<div>${employee.role}</div>`
+            teamInfoHTML += `<div>${employee.id}</div>`
+            teamInfoHTML += `<div>${employee.email}</div>`
+            teamInfoHTML += `<div>${employee.officeNumber}</div><br>`;
+            
+        }else if (employees.role === "Engineer"){
+            teamInfoHTML += `<div>${employee.name}</div>`
+            teamInfoHTML += `<div>${employee.role}</div>`
+            teamInfoHTML += `<div>${employee.id}</div>`
+            teamInfoHTML += `<div>${employee.email}</div>`
+            teamInfoHTML += `<div>${employee.github}</div><br>`;
+            
+        }else {
+            teamInfoHTML += `<div>${employee.name}</div>`
+            teamInfoHTML += `<div>${employee.role}</div>`
+            teamInfoHTML += `<div>${employee.id}</div>`
+            teamInfoHTML += `<div>${employee.email}</div>`
+            teamInfoHTML += `<div>${employee.school}</div><br>`;
+            
+        }
+      
+    }
+    teamInfoHTML += '</div>'
+
     return `
 <!DOCTYPE html>
 <html lang="en">
@@ -15,18 +43,18 @@ function generate(employees) {
     <header>
         <h1> Team Profile </h1>
     </header>
-    <div class="card" style="width: 18rem;">
-        <div class="card-body">
-        <h5 class="card-title">Name: </h5>
-        <h6 class="card-subtitle mb-2 text-muted">Role: </h6>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID: </li>
-            <li class="list-group-item">Email: </li>
-            <li class="list-group-item">GitHub: </li>
-        </ul>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+
+            
+            ${teamInfoHTML}
+
+            </div>
         </div>
     </div>
-<div>Hello World!</div>
+
+
 </body>
 </html>
     
