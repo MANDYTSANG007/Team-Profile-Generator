@@ -6,6 +6,7 @@ const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 
+const generate = require("./dist/htmlGenerate.js");
 //store employee objects as they are created
 const employees = [];
 
@@ -121,7 +122,18 @@ const askNext = () => {
             })
         }else {
             console.log("Team Profile Completed...rendering a team profile page");
+            
+            let html = generate(employees);
+            writeProfile("teamProfile.html", html);
             console.log(employees)
         }
     });
+};
+
+function writeProfile(fileName, data){
+    fs.writeFile(fileName, data, (err) =>{
+        if (err) {
+            console.log(err);
+        }
+    })
 };
