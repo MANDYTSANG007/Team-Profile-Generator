@@ -29,7 +29,7 @@ The application prompts the user for information about the team manager and then
 ## Author
 * **Mandy Tsang**
 
-- [Portfolio](https://mandytsang007.github.io/Mandy-Portfolio/)
+- [Portfolio](https://mandytsang007.github.io/new-portfolio/)
 - [Github](https://github.com/MANDYTSANG007)
 - [LinkedIn](https://www.linkedin.com/in/man-tsang-64308b22a/)
 
