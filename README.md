@@ -23,7 +23,7 @@ The application prompts the user for information about the team manager and then
 
 ## Design Layout
 
-![alt text](TeamProfileGenerator.gif)
+Coming soon!
 
 
 ## Author
