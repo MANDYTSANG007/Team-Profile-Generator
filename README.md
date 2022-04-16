@@ -5,7 +5,7 @@ Team Profile Generator is a command-line application written in Node.js. This ap
 
 ## Getting Started
 
-The application prompts the user for information about the team manager and then it gives options to add engineer or intern. When all team members have been added, this application generates a teamProfile.html. 
+This application prompts the user for information about the team manager and then it gives options to add engineer or intern. When all team members have been added, this application generates a teamProfile.html. 
 
 ## Built With
 
@@ -27,7 +27,7 @@ Coming soon!
 
 
 ## Author
-* **Mandy Tsang**
+**Mandy Tsang**
 
 - [Portfolio](https://mandytsang007.github.io/new-portfolio/)
 - [Github](https://github.com/MANDYTSANG007)
