@@ -11,6 +11,7 @@ This application prompts the user for information about the team manager and the
 
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [Bootstrap](https://getbootstrap.com)
 - [Node.js](https://nodejs.org/en/)
 - [Inquirer.js](https://www.npmjs.com/package/inquirer)
