@@ -19,7 +19,7 @@ This application prompts the user for information about the team manager and the
 
 ## Deployed Link
 
-- [Link to Live Site](https://www.youtube.com/watch?v=0OO9zFq7lno)
+- [Link to Design Layout Video](https://www.youtube.com/watch?v=0OO9zFq7lno)
 - [Link to Github](https://github.com/MANDYTSANG007/Team-Profile-Generator)
 
 ## Design Layout
